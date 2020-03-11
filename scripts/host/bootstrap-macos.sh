@@ -27,11 +27,11 @@ configure_dock() {
     defaults write com.apple.dock mineffect -string 'genie'
 
     echo_task "Setting dock icon size"
-    defaults write com.apple.dock tilesize -int 46
+    defaults write com.apple.dock tilesize -int 43
 
     echo_task "Setting dock magnification"
     defaults write com.apple.dock magnification -bool true
-    defaults write com.apple.dock largesize -int 64
+    defaults write com.apple.dock largesize -int 74
 
     # Double-click a window's title bar to:
     # None
@@ -44,10 +44,10 @@ configure_dock() {
     defaults write com.apple.dock minimize-to-application -bool true
 
     echo_task "Setting dock autohide feature"
-    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock autohide -bool false
 
-    echo_task "Setting dock autohide delay"
-    defaults write com.apple.dock autohide-delay -float 0
+    #echo_task "Setting dock autohide delay"
+    #defaults write com.apple.dock autohide-delay -float 0
 
     # Auto-hide animation duration
     # defaults write com.apple.dock autohide-time-modifier -float 0
@@ -60,19 +60,19 @@ configure_dock() {
 
     echo_task "Setting dock persistent application icons"
     dockutil --remove all
-    dockutil --add /Applications/Launchpad.app
+    dockutil --add /System/Applications/Launchpad.app
     dockutil --add /Applications/Firefox.app
     dockutil --add /Applications/Google\ Chrome.app
     dockutil --add /Applications/iTerm.app
     dockutil --add /Applications/Postman.app
     dockutil --add /Applications/Visual\ Studio\ Code.app
-    dockutil --add /Applications/TextMate.app
-    dockutil --add /Applications/Calculator.app
+    #dockutil --add /Applications/TextMate.app
+    dockutil --add /System/Applications/Calculator.app
     dockutil --add /Applications/Slack.app
     dockutil --add /Applications/Spotify.app
     dockutil --add /Applications/VirtualBox.app
     dockutil --add /Applications/Transmission.app
-    dockutil --add /Applications/App\ Store.app
+    dockutil --add /System/Applications/App\ Store.app
     dockutil --add /Applications/ --view grid --display folder --allhomes
     dockutil --add '~/Documents' --view grid --display folder --allhomes
     dockutil --add '~/Downloads' --view grid --display folder --allhomes
