@@ -42,6 +42,8 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
+  config.vm.synced_folder "../", "/git"
+
   # Custom bootstrap provisioning file.
   config.vm.provision "shell", privileged: false,
     inline: "/bin/bash /vagrant/scripts/guest/bootstrap-vm.sh"

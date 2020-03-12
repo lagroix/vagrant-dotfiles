@@ -41,7 +41,7 @@ configure_dock() {
     defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
 
     echo_task "Setting action for: minimize to application"
-    defaults write com.apple.dock minimize-to-application -bool true
+    defaults write com.apple.dock minimize-to-application -bool false
 
     echo_task "Setting dock autohide feature"
     defaults write com.apple.dock autohide -bool false
